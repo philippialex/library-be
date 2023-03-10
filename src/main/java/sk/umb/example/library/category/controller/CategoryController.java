@@ -6,28 +6,29 @@ import java.util.List;
 
 @RestController
 public class CategoryController {
-    @GetMapping("/api/customers")
-    public List getListResource(@RequestParam(required = false) String lastName){
+    @GetMapping("/api/category")
+    public List getListResource(){
         System.out.println("search list resource.");
+        return null;
     }
 
-    @GetMapping("/api/customers/{customerId}")
-    public void retrieveDetail(@PathVariable Long customerId){
+    @GetMapping("/api/category/{categoryId}")
+    public void retrieveDetail(@PathVariable Long categoryId){
         System.out.println("Retrieve detail.");
     }
 
-    @PostMapping("/api/customers")
+    @PostMapping("/api/category")
     public void createResource(){
         System.out.println("Create resource:");
     }
 
-    @PutMapping("/api/customers/{customerId}")
-    public void updateResource(@PathVariable Long customerId){
-        System.out.println("Update resource: ID = " + customerId);
+    @PutMapping("/api/category/{categoryId}")
+    public void updateResource(@PathVariable Long categoryId){
+        System.out.println("Update resource: ID = " + categoryId);
     }
 
-    @DeleteMapping("/api/customers/{customerId}")
-    public void deleteResource(@PathVariable Long customerId){
-        System.out.println("Delete resource: ID = " + customerId);
+    @DeleteMapping("/api/category/{categoryId}")
+    public void deleteResource(@PathVariable Long categoryId){
+        System.out.println("Delete resource: ID = " + categoryId);
     }
 }
