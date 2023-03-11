@@ -1,13 +1,7 @@
-package sk.umb.example.library.BookDetail.persistence.entity;
+package sk.umb.example.library.book.service;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+public class BookDetailDto {
 
-@Entity(name = "BookDetail")
-public class BookDetailEntity {
-    @Id
-    @GeneratedValue
     private Long id;
 
     private String authorFirstName;
@@ -18,9 +12,9 @@ public class BookDetailEntity {
 
     private String isbn;
 
-    private String count;
+    private Long count;
 
-    private String categoryIds;
+    //private String categoryIds;
 
     public Long getId() {
         return id;
@@ -62,19 +56,11 @@ public class BookDetailEntity {
         this.isbn = isbn;
     }
 
-    public String getCount() {
+    public Long getCount() {
         return count;
     }
 
-    public void setCount(String count) {
+    public void setCount(Long count) {
         this.count = count;
-    }
-
-    public String getCategoryIds() {
-        return categoryIds;
-    }
-
-    public void setCategoryIds(String categoryIds) {
-        this.categoryIds = categoryIds;
     }
 }
